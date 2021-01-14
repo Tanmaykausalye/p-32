@@ -16,6 +16,12 @@ World.add(world, this.launcher)
 
 }
 
+attach(body){
+
+this.launcher.bodyA = body
+
+}
+
 display(){
 if(this.launcher.bodyA){
 var point1 = this.launcher.bodyA.position

@@ -1,6 +1,6 @@
 class Block{
 
-constructor(x,y){
+constructor(x,y, visibility){
 
 var options ={
 
@@ -11,20 +11,37 @@ this.body = Bodies.rectangle(x,y,30,40,options)
 this.width  = 30
 this.height = 40
 
+this.visibility = 255
+
 World.add(world, this.body)
 
 }
 
 display(){
 
-var pos  =this.body.position
+  if(this.body.speed<5){  
+var pos = this.body.position
+var angle = this.body.angle
 
-pop()
+push()
 
+translate(pos.x,pos.y)
+rotate(angle)
 fill(63,224,208)
 rectMode(CENTER)
-rect(pos.x,pos.y,this.width,this.height)
-push()
+rect(0,0,this.width,this.height)
+pop()}
+
+else{
+
+   World.remove(world,this.body)
+   push()
+    this.visbility = this.visibility-1
+    tint(255,this.visbility)
+pop()
+}
+
+
 }
 
 }

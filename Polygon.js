@@ -4,7 +4,7 @@ class Polygon{
  
    var options={
 
-    restitution : 1,
+    restitution : 0.5,
     density : 2
 
    }
