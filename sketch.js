@@ -14,6 +14,10 @@ var  $block1, $block2, $block3, $block4, $block5, $block6, $block7, $block8, $bl
 
 var moon, moonImg
 
+var score = 0 
+
+//var gameState= launched
+
 function  preload() {
   
 moonImg  = loadImage("Moon.jpg")
@@ -82,12 +86,13 @@ createCanvas(1280,607)
 
 function draw(){
 
-background(20,31,66)
+background(20,31,66,50)
 
 fill(237,237,240)
 textSize(26)
 text("launch the polygon and hit on the blocks", 425,40)
 
+text("Score : "+ score,1100,50)
 
 polygon.display()
 ground1.display()
@@ -129,6 +134,43 @@ $block13.display()
 $block14.display()
 $block15.display()
 $block16.display()
+
+
+
+block1.score()
+block2.score()
+block3.score()
+block4.score()
+block5.score()
+block6.score()
+block6.score()
+block7.score()
+block8.score()
+block9.score()
+block10.score()
+block11.score()
+block12.score()
+block13.score()
+block14.score()
+block15.score()
+block16.score()
+
+$block1.score()
+$block2.score()
+$block3.score()
+$block4.score()
+$block5.score()
+$block6.score()
+$block7.score()
+$block8.score()
+$block9.score()
+$block10.score()
+$block11.score()
+$block12.score()
+$block13.score()
+$block14.score()
+$block15.score()
+$block16.score()
 
 
 drawSprites()

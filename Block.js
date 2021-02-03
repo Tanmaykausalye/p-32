@@ -34,14 +34,21 @@ pop()}
 
 else{
 
-   World.remove(world,this.body)
+   
    push()
-    this.visbility = this.visibility-1
+    this.visbility = this.visibility-5
     tint(255,this.visbility)
 pop()
+World.remove(world,this.body)
 }
 
 
 }
 
+score(){
+  if (this.visiblity < 0 && this.visiblity >= -105){
+    score++;
+  }
+
+}
 }
